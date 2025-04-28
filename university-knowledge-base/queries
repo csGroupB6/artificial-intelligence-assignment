@@ -1,0 +1,72 @@
+% --- University Knowledge Base ---
+
+% 1. Find all students
+?- all_students.
+
+% 2. Find all staff (professors and teachers)
+?- all_staff.
+
+% 3. Find all advisors
+?- all_advisors.
+
+% 4. Find all professors and the courses they teach
+?- all_professors_and_courses.
+
+% 5. Find all students and the courses they are enrolled in
+?- all_students_and_courses.
+
+% 6. Find all classmates
+?- all_classmates.
+
+% 7. Find all students with the same major
+?- all_students_with_same_major.
+
+% 8. Find all students who are in the final year (4th year)
+?- all_final_year_students.
+
+% 9. Find all students who like a particular subject (e.g., AI)
+?- all_students_who_like_subject(ai).
+
+% 10. Find all students who share at least one course
+?- all_students_sharing_courses.
+
+% --- Additional Queries for Relationships ---
+
+% 11. Find the gender of a person
+?- gender(john, Gender).
+
+% 12. Find the age of a person
+?- age(susan, Age).
+
+% 13. Find a person’s major
+?- major(john, Major).
+
+% 14. Find the year of a student
+?- year(john, Year).
+
+% 15. Find the courses taught by a professor
+?- teaches(michael, Course).
+
+% 16. Find all students enrolled in a particular course (e.g., CS101)
+?- students_in_course(cs101, Student).
+
+% 17. Find the advisor of a student
+?- advisor(john, Advisor).
+
+% 18. Find if two students have the same major
+?- same_major(john, susan).
+
+% 19. Find if one student is older than another
+?- older_than(john, susan).
+
+% 20. Find if two students are classmates (same course)
+?- classmate(john, susan).
+
+% 21. Check if a student is in their final year
+?- final_year_student(john).
+
+% 22. Check if a student likes a particular subject (e.g., AI)
+?- likes_subject(john, ai).
+
+% 23. Find all students who share at least one course with a given student (e.g., John)
+?- share_course(john, OtherStudent).

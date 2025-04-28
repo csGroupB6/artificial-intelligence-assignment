@@ -1,0 +1,16 @@
+Abstract: University Knowledge Base Project
+This project is designed as a University Knowledge Base System using Prolog, aimed at managing and querying various information related to students, staff, courses, and relationships in an academic institution. The system incorporates facts and rules that describe students' academic details, including their majors, years, courses, and advisors, as well as staff information like professors and their courses. It also models relationships such as classmates, shared courses, and advisors.
+
+The knowledge base includes several key components:
+
+Students and Staff Information: It defines facts like gender, age, major, year of study, and courses students are enrolled in. Staff (professors and advisors) are described with the courses they teach and the students they advise.
+
+Relationships: Rules are created to identify relationships such as classmates (students enrolled in the same course), shared courses, advisors, and students with the same major.
+
+Queries: A comprehensive set of queries allows users to find students, staff, advisors, and courses based on different conditions (e.g., finding all students with the same major, listing all students in a particular course, or identifying professors teaching certain courses).
+
+Favorite Subjects and More: Additionally, the system includes personal preferences such as students' favorite subjects, helping personalize the knowledge base.
+
+The Prolog rules enable recursive querying, making it easy for users to retrieve information such as all students who share the same course, students with the same advisor, or those who like a particular subject.
+
+This project serves as a prototype for an academic management system, with potential applications in automating administrative tasks, querying student performance, and generating academic reports.
