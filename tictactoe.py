@@ -252,19 +252,26 @@ def play_tic_tac_toe_simulation():
     board = initial_state()
     print("Initial board:")
     print_board(board)
-    
+
+    start_time = time.time()
     move_number = 1
     while not terminal(board):
         current_player = player(board)
+        
         action = minimax(board)
+        
+
         board = result(board, action)
         
         print(f"\nMove {move_number}: Player {current_player} places at {action}")
+        
         print_board(board)
         move_number += 1
     
     # Game over
+    end_time = time.time()
     win = winner(board)
+    print(f"Decision time: {end_time - start_time:.4f} seconds")
     if win:
         print(f"Player {win} wins!")
     else:

@@ -270,41 +270,36 @@ def play_tic_tac_toe_simulation():
     board = initial_state()
     print("Initial board:")
     print_board(board)
-    
+
+    start_time = time.time()
     move_number = 1
     while not terminal(board):
         current_player = player(board)
-        start_time = time.time()
+        
         action = minimax_alpha_beta(board)
-        end_time = time.time()
+        
         
         board = result(board, action)
         
         print(f"\nMove {move_number}: Player {current_player} places at {action}")
-        print(f"Decision time: {end_time - start_time:.4f} seconds")
+        
         print_board(board)
         move_number += 1
     
     # Game over
+    end_time = time.time()
     win = winner(board)
+    print(f"Decision time: {end_time - start_time:.4f} seconds")
     if win:
         print(f"Player {win} wins!")
     else:
         print("It's a draw!")
 
 
-def benchmark_comparison():
-    """
-    Compare the performance of regular minimax vs alpha-beta pruning
-    """
-    # This function would need the original minimax implementation to be included
-    # For demonstration purposes only
-    print("This function would compare the performance of both algorithms")
-    print("Alpha-beta pruning typically performs much faster while producing identical results")
 
 
-# Uncomment to play against the computer
+#Play against the computer
 # play_game()
 
-# Uncomment to see a simulation of two perfect players
+#Simulation of two perfect players
 play_tic_tac_toe_simulation()
